@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+
+/* ==============================
+   RESET
+============================== */
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+
+/* ==============================
+   HTML
+============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+  margin: 0;
+
+  background: #f5f1e8;
+
+  color: #111111;
+
+  font-family: "DM Sans", sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* ==============================
+   SELECTION
+============================== */
+
+::selection {
+  background: #f4c542;
+
+  color: #111111;
+}
+
+
+/* ==============================
+   LINKS
+============================== */
+
+a {
+  color: inherit;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+button {
+  font-family: inherit;
+}
