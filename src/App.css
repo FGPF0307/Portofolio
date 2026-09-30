@@ -2278,3 +2278,476 @@
     padding: 2rem;
   }
 }
+
+/* =========================================================
+   CONTACT SECTION — CLEAN VERSION
+========================================================= */
+
+.contact-section {
+  width: 100%;
+  padding: 120px 7vw 100px;
+
+  background: #f5f1e8;
+  color: #111111;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.contact-header {
+  width: 100%;
+  margin-bottom: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.contact-header .section-number {
+  display: inline-block;
+
+  padding: 9px 15px;
+
+  background: #111111;
+  color: #f5f1e8;
+
+  border-bottom: 4px solid #f4c542;
+
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+
+.contact-doodle {
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transform: rotate(-3deg);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.contact-content {
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
+
+.contact-left {
+  width: 100%;
+}
+
+
+.contact-label {
+  display: block;
+
+  margin-bottom: 20px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+
+.contact-left h2 {
+  margin: 0 0 30px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(70px, 8vw, 110px);
+
+  font-weight: 800;
+
+  line-height: 0.88;
+
+  letter-spacing: -5px;
+}
+
+
+.contact-left h2 span {
+  display: inline-block;
+
+  padding: 5px 14px 8px;
+
+  background: #f4c542;
+
+  transform: rotate(-2deg);
+}
+
+
+.contact-left p {
+  max-width: 430px;
+
+  margin: 0 0 30px;
+
+  color: #444444;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.contact-email {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 13px 18px;
+
+  background: #a8d8c0;
+
+  color: #111111;
+
+  border: 2px solid #111111;
+
+  box-shadow: 5px 5px 0 #111111;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.contact-email:hover {
+  transform: translate(3px, 3px);
+
+  box-shadow: 2px 2px 0 #111111;
+}
+
+
+/* =========================================================
+   CONTACT SOCIAL BOX
+========================================================= */
+
+.contact-social-box {
+  position: relative;
+
+  width: 100%;
+
+  padding: 38px;
+
+  background: #ffffff;
+
+  border: 3px solid #111111;
+
+  box-shadow: 9px 9px 0 #111111;
+
+  transform: rotate(1deg);
+}
+
+
+/* =========================================================
+   TAPE
+========================================================= */
+
+.contact-social-box::before {
+  content: "";
+
+  position: absolute;
+
+  top: -17px;
+  left: 50%;
+
+  width: 105px;
+  height: 32px;
+
+  background: rgba(244, 197, 66, 0.85);
+
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+
+/* =========================================================
+   SOCIAL TITLE
+========================================================= */
+
+.contact-social-title {
+  margin-bottom: 15px;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SOCIAL DESCRIPTION
+========================================================= */
+
+.contact-social-description {
+  max-width: 400px;
+
+  margin: 0 0 30px;
+
+  color: #555555;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.contact-social-links {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   SOCIAL LINK
+========================================================= */
+
+.contact-social-links a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: 16px 18px;
+
+  background: #f5f1e8;
+
+  color: #111111;
+
+  border: 2px solid #111111;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.contact-social-links a:hover {
+  background: #f4c542;
+
+  transform: translate(-3px, -3px);
+
+  box-shadow: 5px 5px 0 #111111;
+}
+
+
+/* =========================================================
+   SIMPLE FOOTER
+========================================================= */
+
+.contact-footer {
+  width: min(1200px, 100%);
+
+  margin: 90px auto 0;
+
+  padding-top: 25px;
+
+  border-top: 2px solid #111111;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .contact-section {
+    padding: 90px 6vw 80px;
+  }
+
+
+  .contact-header {
+    margin-bottom: 60px;
+  }
+
+
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+
+  .contact-left {
+    max-width: 650px;
+  }
+
+
+  .contact-left h2 {
+    font-size: 90px;
+  }
+
+
+  .contact-social-box {
+    transform: none;
+  }
+
+
+  .contact-footer {
+    margin-top: 80px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .contact-section {
+    padding: 75px 20px 60px;
+  }
+
+
+  .contact-header {
+    margin-bottom: 50px;
+  }
+
+
+  .contact-doodle {
+    display: none;
+  }
+
+
+  .contact-left h2 {
+    font-size: 72px;
+
+    letter-spacing: -4px;
+  }
+
+
+  .contact-left p {
+    font-size: 15px;
+  }
+
+
+  .contact-email {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  /* SOCIAL BOX */
+
+  .contact-social-box {
+    padding: 28px 20px;
+
+    box-shadow: 7px 7px 0 #111111;
+  }
+
+
+  .contact-social-box::before {
+    width: 85px;
+  }
+
+
+  .contact-social-title {
+    font-size: 16px;
+  }
+
+
+  .contact-social-description {
+    font-size: 13px;
+
+    margin-bottom: 25px;
+  }
+
+
+  /* SOCIAL LINKS */
+
+  .contact-social-links {
+    gap: 10px;
+  }
+
+
+  .contact-social-links a {
+    padding: 14px 15px;
+
+    font-size: 13px;
+  }
+
+
+  /* FOOTER */
+
+  .contact-footer {
+    margin-top: 65px;
+
+    padding-top: 20px;
+
+    font-size: 9px;
+  }
+
+}

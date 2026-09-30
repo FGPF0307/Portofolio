@@ -110,24 +110,19 @@ function AboutSection() {
         transition={{ duration: 0.7, delay: 0.2 }}
       >
         <div className="stat">
-          <strong>CS</strong>
-          <span>Student</span>
-        </div>
+  <strong>CS</strong>
+  <span>Student</span>
+</div>
 
-        <div className="stat">
-          <strong>∞</strong>
-          <span>Things to Learn</span>
-        </div>
+<div className="stat">
+  <strong>∞</strong>
+  <span>Things to Learn</span>
+</div>
 
-        <div className="stat">
-          <strong>01</strong>
-          <span>Journey in Progress</span>
-        </div>
-
-        <div className="stat">
-          <strong>2027</strong>
-          <span>Enrichment Goal</span>
-        </div>
+<div className="stat">
+  <strong>04+</strong>
+  <span>Projects Built</span>
+</div>
       </motion.div>
     </section>
   );

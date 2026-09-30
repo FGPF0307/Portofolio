@@ -4,6 +4,7 @@ import "./App.css";
 import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 
 function App() {
   return (
@@ -20,8 +21,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
-          <a href="#enrichment">Enrichment</a>
-        </div>S
+        </div>
 
         <a href="#contact" className="nav-contact">
           Let's Talk
@@ -214,15 +214,7 @@ function App() {
 
         <ProjectsSection />
 
-<section id="enrichment" className="placeholder-section">
-  <span>04</span>
-  <h2>Enrichment 2027</h2>
-</section>
-
-<section id="contact" className="placeholder-section">
-  <span>05</span>
-  <h2>Contact</h2>
-</section>
+        <ContactSection />
 
       </main>
 

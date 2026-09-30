@@ -1,114 +1,128 @@
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, Send, MapPin } from "lucide-react";
 
 function ContactSection() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Logika pengiriman form (bisa diintegrasikan dengan EmailJS atau backend Express Anda)
-    alert("Message sent! I will get back to you soon.");
-  };
-
   return (
     <section id="contact" className="contact-section">
+
+      {/* ================= HEADER ================= */}
       <div className="contact-header">
+
+        <div className="section-number">
+          04 / CONTACT
+        </div>
+
+        <div className="contact-doodle">
+          say hello ↘
+        </div>
+
+      </div>
+
+
+      {/* ================= CONTENT ================= */}
+      <div className="contact-content">
+
+        {/* ================= LEFT ================= */}
         <motion.div
-          className="section-number"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="contact-left"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          04 / CONTACT
+
+          <div className="contact-label">
+            HAVE A PROJECT IN MIND?
+          </div>
+
+          <h2>
+            Let's
+            <br />
+            <span>talk.</span>
+          </h2>
+
+          <p>
+            Whether you want to collaborate, have a project idea,
+            or simply want to say hello, feel free to reach out.
+          </p>
+
+          <a
+            href="mailto:farrelfadia3@gmail.com"
+            className="contact-email"
+          >
+            farrelfadia3@gmail.com ↗
+          </a>
+
         </motion.div>
-      </div>
 
-      <div className="contact-title-row">
-        <motion.h2
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          Let's build something
-          <br />
-          <span>together.</span>
-        </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-        >
-          Feel free to reach out if you're looking for a developer, 
-          have a question, or just want to connect.
-        </motion.p>
-      </div>
-
-      <div className="contact-content">
-        {/* Kiri: Informasi Kontak */}
-        <motion.div 
-          className="contact-info"
+        {/* ================= RIGHT ================= */}
+        <motion.div
+          className="contact-social-box"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <div className="info-card">
-            <h3>Contact Details</h3>
-            <div className="info-item">
-              <Mail size={20} className="info-icon" />
-              <a href="mailto:hello@farrel.com">hello@farrel.com</a>
-            </div>
-            <div className="info-item">
-              <MapPin size={20} className="info-icon" />
-              <span>Jakarta, Indonesia</span>
-            </div>
+
+          <div className="contact-social-title">
+            FIND ME HERE ✦
           </div>
 
-          <div className="social-links">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="social-btn">
-              <Github size={22} />
+          <p className="contact-social-description">
+            You can also find me through these platforms.
+          </p>
+
+
+          <div className="contact-social-links">
+
+            {/* GITHUB */}
+            <a
+              href="https://github.com/FGPF0307"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>GitHub</span>
+              <span>↗</span>
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-btn">
-              <Linkedin size={22} />
+
+
+            {/* LINKEDIN */}
+            <a
+              href="https://www.linkedin.com/in/farrel-ganendra-p-f-109490326"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>LinkedIn</span>
+              <span>↗</span>
             </a>
+
+
+            {/* EMAIL */}
+            <a href="mailto:farrelfadia3@gmail.com">
+              <span>Email</span>
+              <span>↗</span>
+            </a>
+
           </div>
+
         </motion.div>
 
-        {/* Kanan: Contact Form */}
-        <motion.div 
-          className="contact-form-container"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="John Doe" required />
-            </div>
-            
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="john@example.com" required />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </div>
-
-            <button type="submit" className="submit-btn">
-              Send Message
-              <Send size={18} />
-            </button>
-          </form>
-        </motion.div>
       </div>
+
+
+      {/* ================= FOOTER ================= */}
+      <footer className="contact-footer">
+
+        <span>
+          © 2026 FARREL GANENDRA
+        </span>
+
+        <span>
+          BINUSIAN
+        </span>
+
+      </footer>
+
     </section>
   );
 }
