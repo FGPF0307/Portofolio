@@ -12,7 +12,7 @@ function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          01 / ABOUT ME
+          QUEST 01 / ABOUT ME
         </motion.div>
 
         <motion.div

@@ -2751,3 +2751,92 @@
   }
 
 }
+
+/* =====================================================
+   EXTRAS: progress bar, role rotator, marquee, texture
+===================================================== */
+
+body {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  z-index: 200;
+  background: #f4c542;
+  border-bottom: 2px solid #111111;
+  transform-origin: 0 50%;
+}
+
+.role-rotator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 26px;
+  min-height: 34px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.role-prefix {
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.role-text {
+  padding: 4px 12px;
+  background: #111111;
+  color: #f4c542;
+  font-size: 16px;
+  transform: rotate(-1.5deg);
+  box-shadow: 3px 3px 0 #f4c542;
+}
+
+.marquee {
+  overflow: hidden;
+  background: #111111;
+  color: #f5f1e8;
+  border-top: 2px solid #111111;
+  border-bottom: 2px solid #111111;
+  transform: rotate(-1deg);
+  margin: 40px -2% 20px;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 28s linear infinite;
+}
+
+.marquee-track span {
+  padding: 14px 28px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.marquee-track b {
+  color: #f4c542;
+  margin-left: 28px;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}

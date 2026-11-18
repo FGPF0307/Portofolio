@@ -8,7 +8,7 @@ function ContactSection() {
       <div className="contact-header">
 
         <div className="section-number">
-          04 / CONTACT
+          QUEST 04 / CONTACT
         </div>
 
         <div className="contact-doodle">

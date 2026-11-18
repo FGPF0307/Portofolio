@@ -1,14 +1,20 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Download } from "lucide-react";
 import "./App.css";
+import "./game.css";
 import AboutSection from "./components/AboutSection";
 import SkillsSection from "./components/SkillsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
+import { Hud, RoleRotator, Marquee, SoundToggle, LoadingScreen, Konami } from "./components/Extras";
 
 function App() {
   return (
     <div className="app">
+      <Hud />
+      <SoundToggle />
+      <LoadingScreen />
+      <Konami />
 
       {/* ================= NAVBAR ================= */}
       <nav className="navbar">
@@ -21,6 +27,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="/CV-Farrel.pdf" download>CV</a>
         </div>
 
         <a href="#contact" className="nav-contact">
@@ -45,7 +52,7 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              ✦ HELLO, WELCOME TO MY SPACE
+              ▶ PRESS START · PLAYER 1
             </motion.div>
 
 
@@ -74,6 +81,8 @@ function App() {
               and turning ideas into something real.
             </motion.p>
 
+            <RoleRotator />
+
 
             <motion.div
               className="hero-buttons"
@@ -96,6 +105,15 @@ function App() {
                 className="secondary-button"
               >
                 More About Me
+              </a>
+
+              <a
+                href="/CV-Farrel.pdf"
+                download
+                className="secondary-button"
+              >
+                <Download size={16} />
+                Download CV
               </a>
 
             </motion.div>
@@ -133,13 +151,19 @@ function App() {
             <div className="photo-card">
 
               <div className="photo-placeholder">
-                YOUR
+                <img
+                  className="photo-img"
+                  src="/Foto%20Profile.png"
+                  alt="Farrel"
+                  onError={(e) => e.currentTarget.remove()}
+                />
+                PLAYER
                 <br />
-                PHOTO
+                ONE
               </div>
 
               <div className="photo-caption">
-                that's me :)
+                LV.1 · ready!
               </div>
 
             </div>
@@ -160,9 +184,9 @@ function App() {
                 ease: "easeInOut",
               }}
             >
-              Keep
+              +10 XP
               <br />
-              Learning ✦
+              Keep Learning
             </motion.div>
 
 
@@ -183,13 +207,15 @@ function App() {
             >
               Build
               <br />
-              Something!
+              New Quest!
             </motion.div>
 
           </motion.div>
 
         </section>
 
+
+        <Marquee />
 
         {/* ================= QUICK INTRO ================= */}
         <section className="quick-intro">

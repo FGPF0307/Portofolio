@@ -3,22 +3,49 @@ import {
   Code2,
   Database,
   Palette,
-  Brain,
   Smartphone,
+  Rocket,
+  Webhook,
+  PenTool,
+  MousePointerClick,
   Globe,
 } from "lucide-react";
+
+// brand logos live in public/icons; tools without a logo use a drawn icon
+const logos = {
+  Java: "java", C: "c", TypeScript: "typescript", HTML: "html", CSS: "css",
+  JavaScript: "javascript", "React.js": "react", MySQL: "mysql",
+  Supabase: "supabase", Figma: "figma", Flutter: "flutter",
+  "VS Code": "vscode", Laravel: "laravel", "Express.js": "express", Git: "git", GitHub: "github", Docker: "docker", PostgreSQL: "postgresql", Python: "python", "Android Studio": "androidstudio", Eclipse: "eclipse",
+};
+const fallbackIcons = { "REST API": Webhook, SQL: Database, Prototyping: PenTool, HCI: MousePointerClick };
+
+function ToolChip({ name }) {
+  const Fallback = fallbackIcons[name];
+
+  return (
+    <span className="tool-chip">
+      {logos[name] ? (
+        <img src={`/icons/${logos[name]}.svg`} alt="" width="16" height="16" />
+      ) : (
+        Fallback && <Fallback size={16} strokeWidth={2.5} aria-hidden="true" />
+      )}
+      {name}
+    </span>
+  );
+}
 
 const skills = [
   {
     icon: Code2,
     title: "Programming",
-    items: ["Java", "C", "TypeScript"],
+    items: ["Java", "C", "Python", "TypeScript"],
     color: "yellow",
   },
   {
     icon: Globe,
     title: "Web Development",
-    items: ["HTML", "CSS", "JavaScript", "React.js"],
+    items: ["HTML", "CSS", "JavaScript", "React.js", "Express.js", "Laravel"],
     color: "green",
   },
   {
@@ -34,16 +61,16 @@ const skills = [
     color: "yellow",
   },
   {
-    icon: Brain,
-    title: "AI & Algorithms",
-    items: ["Machine Learning", "Algorithms", "Problem Solving"],
-    color: "green",
-  },
-  {
     icon: Smartphone,
     title: "Tools & Development",
-    items: ["Flutter", "VS Code", "Android Studio", "Eclipse"],
+    items: ["Flutter", "VS Code", "Android Studio", "Eclipse", "Git", "GitHub"],
     color: "pink",
+  },
+  {
+    icon: Rocket,
+    title: "Next Level",
+    items: ["Docker", "PostgreSQL", "REST API"],
+    color: "next",
   },
 ];
 
@@ -58,7 +85,7 @@ function SkillsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          02 / SKILLS
+          QUEST 02 / SKILLS
         </motion.div>
 
         <motion.p
@@ -137,7 +164,7 @@ function SkillsSection() {
 
               <div className="skill-items">
                 {skill.items.map((item) => (
-                  <span key={item}>{item}</span>
+                  <ToolChip key={item} name={item} />
                 ))}
               </div>
 
