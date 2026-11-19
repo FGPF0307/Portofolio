@@ -226,7 +226,7 @@ export function RoleRotator() {
   );
 }
 
-const items = ["Flutter", "React", "Supabase", "Figma", "Express.js", "Redis", "JavaScript", "UI Design"];
+const items = ["React", "Supabase", "Figma", "Express.js", "Java", "JavaScript", "UI Design"];
 
 export function Marquee() {
   const row = [...items, ...items];
